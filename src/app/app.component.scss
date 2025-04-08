@@ -1,0 +1,102 @@
+// app.component.scss
+
+// Matrix-style color variables
+$matrix-green: #0f0;
+$matrix-dark: #000;
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: $matrix-dark;
+  border: 1px solid $matrix-green;
+  border-radius: 8px;
+  color: $matrix-green;
+  font-family: "Courier New", Courier, monospace;
+  box-shadow: 0 0 10px $matrix-green;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-shadow: 0 0 5px $matrix-green;
+  }
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+
+  input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+    border: 1px solid $matrix-green;
+    color: $matrix-green;
+    outline: none;
+    transition: border 0.3s ease;
+
+    &:focus {
+      border-color: lighten($matrix-green, 10%);
+    }
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    background: transparent;
+    border: 1px solid $matrix-green;
+    color: $matrix-green;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background: $matrix-green;
+      color: $matrix-dark;
+    }
+  }
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid $matrix-green;
+
+    input[type="checkbox"] {
+      accent-color: $matrix-green;
+    }
+
+    span {
+      flex: 1;
+      margin-left: 10px;
+    }
+
+    button {
+      margin-left: 15px;
+      padding: 5px 10px;
+      background: transparent;
+      border: 1px solid $matrix-green;
+      color: $matrix-green;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background: $matrix-green;
+        color: $matrix-dark;
+      }
+    }
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  color: darken($matrix-green, 25%);
+}
